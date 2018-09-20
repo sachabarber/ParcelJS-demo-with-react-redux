@@ -11,11 +11,15 @@ Ensure you have done the following
 - open browser and you should see the following
 
 
-![Starting.png][Starting.png]
+![alt text](Starting.png "Starting")
+
 
 See how source maps are on my default
 
-![SourceMapsByDefault.png][SourceMapsByDefault.png]
+
+![alt text](SourceMapsByDefault.png "SourceMapsByDefault")
+
+
 
 
 This tiny demo, demonstrates a few things
