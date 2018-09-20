@@ -32,6 +32,5 @@ This tiny demo, demonstrates a few things
 All with no config
 
 
-** PROD **
-For prod you would likely want to use the following command `parcel index.html --no-source-maps`
-
+## PROD Release ##
+For prod you would likely want to use the following command `parcel index.html --no-source-maps`. You can read more on the ParcelJs CLI section : [https://parceljs.org/cli.html](https://parceljs.org/cli.html)
