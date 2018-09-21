@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import { store } from './redux/store';
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem, Button } from 'react-bootstrap';
@@ -26,7 +26,7 @@ class MainNav extends React.Component<undefined, undefined> {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem eventKey={2} href="#/detailsPage">
+            <NavItem eventKey={2} href="#/detailsPage/4">
               Details
             </NavItem>
             <NavItem eventKey={2} href="#/ordersPage">
@@ -52,15 +52,14 @@ class App extends React.Component<undefined, undefined> {
   }
 }
 
-ReactDOM.render(
+export const Main = () => (
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route component={App}>
         <Route path="/" component={Details} />
-		<Route path="/detailsPage" component={Details} />
+        <Route path="/detailsPage/:id" component={Details} />
         <Route path="/ordersPage" component={Orders} />
       </Route>
     </Router>
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 );

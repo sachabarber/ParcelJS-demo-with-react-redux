@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-import { RouteComponentProps } from 'react-router';
 import { RootState } from './redux/index';
 import { incrementCounter } from './redux/details';
 
@@ -15,11 +14,13 @@ interface Actions {
   incrementCounter: any;
 }
 
-interface TOwnProps extends RouteComponentProps<{ id: string }> {}
+interface TOwnProps{
+  params: {id: string};
+}
 
 interface State {}
 
-class DetailsInner extends React.Component<Props & Actions, State> {
+class DetailsInner extends React.Component<Props & Actions & TOwnProps, State> {
   constructor(props: any) {
     super(props);
   }
@@ -27,7 +28,7 @@ class DetailsInner extends React.Component<Props & Actions, State> {
   render() {
     return (
       <Well className="outer-well">
-        <div>this is the Details page</div>
+        <div>this is the Details page {this.props.params && this.props.params.id}</div>
         <div>Counter : {this.props.counter}</div>
         <div>
           <button onClick={this.props.incrementCounter}>Increment</button>
