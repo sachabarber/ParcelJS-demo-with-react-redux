@@ -28,6 +28,8 @@ This tiny demo, demonstrates a few things
 - Modules
 - Node modules getting loads
 - SCSS
+- React typescript
+- React Redux
 
 All with no config
 
